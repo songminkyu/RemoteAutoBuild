@@ -5,21 +5,21 @@ namespace AutoBuild.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FileExecutionController : ControllerBase
+    public class ProductInfoController : ControllerBase
     {  
-        private readonly ILogger<FileExecutionController> _logger;
+        private readonly ILogger<ProductInfoController> _logger;
 
-        public FileExecutionController(ILogger<FileExecutionController> logger)
+        public ProductInfoController(ILogger<ProductInfoController> logger)
         {
             _logger = logger;
         }
         [HttpPost]       
         [Route("run-file")]
-        public IActionResult RunFile([FromBody] FileExeInfo fileinfo)
+        public IActionResult RunFile([FromBody] ProductInfo productInfo)
         {            
-            if (System.IO.File.Exists(fileinfo.Path))
+            if (System.IO.File.Exists(productInfo.Path))
             {
-                System.Diagnostics.Process.Start(fileinfo.Path);
+                System.Diagnostics.Process.Start(productInfo.Path);
                 return Ok("File executed successfully.");
             }
 

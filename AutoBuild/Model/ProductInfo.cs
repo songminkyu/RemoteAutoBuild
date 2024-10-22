@@ -4,7 +4,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AutoBuild.Model
 {
-    public class FileExeInfo
+    public class ProductInfo
     { 
         public string Path { get; set; }
 
