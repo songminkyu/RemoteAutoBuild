@@ -26,9 +26,17 @@ namespace AutoBuild.Controllers
             {
                 startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FF.py";              
             }
-            else
+            else if (productInfo.ProductName == Enums.ProductCategory.FFR_Portable)
             {
                 startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FF_Portable.py 0 1";
+            }
+            else if(productInfo.ProductName == Enums.ProductCategory.FMFR)
+            {
+                startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FMF.py";
+            }
+            else
+            {
+                startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FML.py";
             }
             using (Process process = Process.Start(startInfo))
             {
