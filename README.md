@@ -1,1 +1,1 @@
-원격 AutoBuild 기능 구현 중
+Client : https://github.com/songminkyu/AutoBuilderlauncher
