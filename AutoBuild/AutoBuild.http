@@ -1,4 +1,4 @@
-@AutoBuild_HostAddress = http://172.16.10.86:5159
+@AutoBuild_HostAddress = http://localhost:5159
 
 POST {{AutoBuild_HostAddress}}/Model/FileExeInfo
 Accept: text/plain
