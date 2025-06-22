@@ -25,21 +25,17 @@ namespace AutoBuild.Controllers
                 startInfo.FileName = "python";
                 startInfo.UseShellExecute = false;
                 startInfo.CreateNoWindow = false;
-                if (productInfo.ProductName == Enums.ProductCategory.FFR)
+                if (productInfo.ProductName == Enums.ProductCategory.delivery_msa)
                 {
-                    startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FF.py";
+                    startInfo.Arguments = @"Todo delivery_msa build argument";
                 }
-                else if (productInfo.ProductName == Enums.ProductCategory.FFR_Portable)
+                else if (productInfo.ProductName == Enums.ProductCategory.loans_msa)
                 {
-                    startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FF_Portable.py 0 1";
-                }
-                else if (productInfo.ProductName == Enums.ProductCategory.FMFR)
-                {
-                    startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FMF.py";
+                    startInfo.Arguments = @"Todo loans_msa build argument";
                 }
                 else
                 {
-                    startInfo.Arguments = @"D:\Source\AutoBuild\Scripts\AutoBuild_R_FML.py";
+                    startInfo.Arguments = @"Todo other build argument";
                 }
                 using (Process process = Process.Start(startInfo))
                 {
